@@ -1,0 +1,24 @@
+{
+  "name": "mechamoallan",
+  "version": "1.0.0",
+  "description": "My portfolio 'n website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allanferreira/mechamoallan.git"
+  },
+  "author": "Allan Ferreira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allanferreira/mechamoallan/issues"
+  },
+  "homepage": "https://github.com/allanferreira/mechamoallan#readme",
+  "dependencies": {
+    "hapi": "^16.3.0",
+    "inert": "^4.2.0",
+    "joi": "^10.5.2"
+  }
+}
