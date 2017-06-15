@@ -1,0 +1,72 @@
+folder = #00ecea
+
+git = #0067ee
+gitBranch = #ff0017
+
+nodemonStart = #fdfb55
+nodemonRun = #00fd52
+
+jsCodeVarOperator = #00ecea
+jsCodeArrowOperator = #00ecea
+jsCodeSpreadOperator = #ff006e
+jsCodeEqual = #ff006e
+jsCodeReturn = #ff006e
+jsCodeNumber = #b317d2
+jsCodeString = #fdfb55
+jsCodeFn = #00ecea
+jsCodeFnArg = #fff
+
+.window
+	background inherit
+	color #fff
+	min-height 100vh
+	display flex
+	.split
+		borderConfig = 1px solid #333
+
+		flex 1
+		box-sizing border-box
+		padding 15px
+		height inherit
+		border borderConfig
+		border-left 0
+		&:first-child
+			border-left borderConfig
+	.line
+		line = 16px
+		line-height line
+		min-height line
+
+.folder
+	color folder
+	
+.git
+	color git
+	.branch
+		color gitBranch
+		
+.nodemon
+	&.start
+		color nodemonStart
+	&.run
+		color nodemonRun
+
+.jsCode
+	.arrowOperator
+		color jsCodeArrowOperator
+	.varOperator
+		color jsCodeVarOperator
+	.spreadOperator
+		color jsCodeSpreadOperator
+	.equal
+		color jsCodeEqual
+	.return
+		color jsCodeReturn
+	.number
+		color jsCodeNumber
+	.string
+		color jsCodeString
+	.fn
+		color jsCodeFn
+	.arg
+		color jsCodeFnArg
