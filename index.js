@@ -1,10 +1,28 @@
 const Hapi  = require('hapi')
     , Inert = require('inert')
+    , mongodb = require('mongodb')
+
+
+var uri = 'mongodb://heroku_q6zr373f:lea1l3facssp39rmlmev474v83@ds145659.mlab.com:45659/heroku_q6zr373f'
+mongodb.MongoClient.connect(uri, function(err, db) {
+  
+    if(err) throw err
+    var blog = db.collection('blog')
+
+    blog.find({}, (err, docs) => {
+
+        docs.each(function(err, doc) {
+            if(!doc) return
+            
+            console.log(doc)
+        })
+
+    })
+})
+
 
 const server = new Hapi.Server()
-
 server.connection({ port: process.env.PORT || 8080, host: '0.0.0.0' })
-
 
 server.register(Inert, (err) => {
 
